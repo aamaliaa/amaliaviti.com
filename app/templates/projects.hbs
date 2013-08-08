@@ -1,0 +1,25 @@
+<div class="main">
+	<ul class="projects-list tiles">
+	{{#each project in controller}}
+		<li class="project-tile">
+			{{#if project.img_url}}
+
+			<div class="image" {{ bindAttr style="project.img_style" }}></div>
+
+			{{else}}
+
+			<div class="image" style="background-image:url(http://placehold.it/800x600)"></div>
+
+			{{/if}}
+			{{#linkTo 'project' project}}
+				<div class="overlay">
+					<h4>{{project.title}}</h4>
+				</div>
+				<div class="meta">
+					<div class="blurb">{{project.blurb}}</div>
+				</div>
+			{{/linkTo}}
+		</li>
+	{{/each}}
+	</ul>
+</div>
