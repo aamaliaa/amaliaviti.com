@@ -1,5 +1,15 @@
 {
     "node": true,
+    "jquery": true,
+    "predef": [
+	"Amalia",
+	"DS",
+	"$",
+	"Em",
+	"Ember",
+	"Showdown",
+	"Handlebars"
+    ],
     "browser": true,
     "esnext": true,
     "bitwise": false,
