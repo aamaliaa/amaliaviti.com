@@ -1,5 +1,5 @@
 <div class="main">
-	
+{{#each about in controller}}	
 	<div class="bio" style="margin: 0 auto">
 		<div class="avatar-wrapper">
 			<img alt="Amalia Viti" class="avatar" src="../images/aviti_avatar.jpg">
@@ -20,7 +20,7 @@
 	</div>
 
 	<div class="about">
-		{{{model.content}}}
+		{{{about.content}}}
 	</div>
-
+{{/each}}
 </div>

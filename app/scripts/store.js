@@ -6,6 +6,14 @@ Amalia.Store = DS.Store.extend({
 // Note: this is Fixture data for the time being
 // TODO: switch to MongoDB and a Node.js API to serve JSON files
 // 		 using Ember DS.RESTAdapter
+Amalia.About = DS.Model.extend({
+	content: DS.attr('string')
+});
+
+Amalia.About.FIXTURES = [{
+	"id": "1",
+	"content": "<p>I find I am happiest when I am making things. These things include, but are not at all limited to web apps, hackathon projects, physical computing thingamabobs (think: arduino, raspberry pi, and the Internet of Things), and music. I am fascinated with the way things work and have been a tinkerer for as long as I can remember--<a href=\"http://www.aamaliaa.com/post/56397901620/legos-were-are-my-favorite\">LEGOs</a> were and still are my favorite toy. That cool place where technology, design, and creativity intersect is where I like to spend most of my time.</p> <p>I am curious. I like to learn something new every day and am always trying to discover new ways to do just that.</p> <p>I currently work as a full-stack developer at <strong><a href=\"http://www.mediamath.com\">MediaMath</a></strong>.</p>"
+}];
 
 Amalia.Project = DS.Model.extend({
 	title: DS.attr('string'),
@@ -65,7 +73,7 @@ Amalia.Project.FIXTURES = [
 		"id": "voteforjordan",
 		"title": "voteforjordan",
 		"date": "",
-		"img_url": "../images/projects/voteforjordan_screenshot.png",
+		"img_url": "http://s3.amazonaws.com/av_main/projects/voteforjordan_screenshot.png",
 		"time_period": "October 2012",
 		"url": "http://www.voteforjordan.com",
 		"blurb": "A swing voter put his presidential vote up to a vote on Twitter.",
@@ -78,7 +86,7 @@ Amalia.Project.FIXTURES = [
 		"id": "fanfare",
 		"title": "fanfare",
 		"date": "",
-		"img_url": "../images/projects/fanfare_screenshot.png",
+		"img_url": "http://s3.amazonaws.com/av_main/projects/fanfare_screenshot.png",
 		"time_period": "June 2012",
 		"url": "",
 		"blurb": "A hackathon project that connected concertgoers via their music tastes.",
@@ -91,7 +99,7 @@ Amalia.Project.FIXTURES = [
 		"id": "fourplay",
 		"title": "fourplay",
 		"date": "",
-		"img_url": "../images/projects/fourplay_screenshot.png",
+		"img_url": "http://s3.amazonaws.com/av_main/projects/fourplay_screenshot.png",
 		"time_period": "May 2012",
 		"url": "",
 		"blurb": "A hackathon mashup of the Craigslist Missed Connections and Foursquare.",
@@ -104,7 +112,7 @@ Amalia.Project.FIXTURES = [
 		"id": "ikea-timelapse",
 		"title": "IKEA timelapse",
 		"date": "",
-		"img_url": "../images/projects/ikea_screenshot.jpg",
+		"img_url": "http://s3.amazonaws.com/av_main/projects/ikea_screenshot.jpg",
 		"time_period": "May 2011",
 		"url": "",
 		"blurb": "Timelapse videos of IKEA furniture construction",
