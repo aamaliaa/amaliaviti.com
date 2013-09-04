@@ -35,7 +35,7 @@ Amalia.Project.FIXTURES = [
 		"title": "citibike",
 		"date": "",
 		"img_url": "",
-		"time_period": "Summer 2013",
+		"time_period": "June 2013",
 		"url": "http://citibike.amaliaviti.com",
 		"blurb": "An exploration with the Citibike API, Google Maps API, d3.js, and Ember.js.",
 		"post": "This is some sample text.\n\nBacon ipsum dolor sit amet proident aliqua swine, ex tempor tail do strip steak bresaola. Cillum magna shank, in ea aute frankfurter capicola. Voluptate cupidatat sint ex beef pork belly. Chuck et bresaola est sed ground round id incididunt spare ribs. Fugiat meatball et, ribeye tri-tip occaecat ham drumstick eu pastrami mollit dolor nisi aliqua labore.\n\nPork belly boudin shankle meatloaf cillum irure. Ham hock pork chop eiusmod in pancetta pastrami aliqua. Turkey sausage salami chicken ham hock. Consequat ball tip beef ribs pork belly sunt in chicken quis anim hamburger cupidatat ullamco.\n\nSalami pork pork chop elit, in ut magna pork loin dolor minim sint ribeye. In chuck ut enim tempor, sint irure pariatur qui boudin kielbasa. Dolor pork short loin spare ribs, eiusmod quis turducken meatloaf voluptate sirloin dolore. Sunt consequat ut bresaola sausage occaecat, sirloin biltong. Brisket mollit minim laborum prosciutto sirloin deserunt. Sirloin ad dolore minim.",
@@ -51,7 +51,7 @@ Amalia.Project.FIXTURES = [
 		"time_period": "July 2013",
 		"url": "",
 		"blurb": "A simple jQuery plugin that flashes text from a list.",
-		"post": "I saw an effect similar to this while browsing one day and decided that I wanted to implement it on my personal site. It was a simple enough feature (that I could imagine would be quite useful for other projects) so I decided to code it as a jQuery plugin.",
+		"post": "turnUp.js is a jQuery plugin that, given a list of strings, continuously grabs one string randomly and \"turns it up\".\n\n<h1 class='turnup' style='text-align: center;'>NYMERIA</h1><script>$('.turnup').turnup({list: ['Grey Wind', 'Lady', 'Nymeria', 'Summer', 'Shaggy Dog']});</script>\n\nI came across a similar implementation of this effect while browsing the Internet one day and decided that it might make a useful plugin for my portfolio (see the 'about' page) and other future projects.\n\n###How to Use\n\nIt's super simple to plug it in your code:\n\n\t$('#title').turnup({ list: ['one', 'two', 'three', 'four'] });\n\nYou can also change the CSS3 transition and interval time:\n\n\t$('#title').turnup({\n\t\tlist: ['Grey Wind', 'Lady', 'Nymeria', 'Summer', 'Shaggy Dog'],\n\t\ttransition: 'all 250ms ease',\n\t\tinterval: 450\n\t});\t\n\n###Options\n\n - `list: ['one', 'two', 'three', 'four']` - an array of strings\n\n - `transition: 'all 250ms ease'` - valid css string\n\n - `interval: 450` - time between words (in milliseconds)\n\n###Public Methods\n\nIf you want to stop an instance after it has been instantiated, just tell it to stop.\n\n\t$('#title').turnup('stop');\n\nThen you can also turn up again!\n\n\t$('#title').turnup('start');\n\n###To Do\n\n * add options for cycling through list (i.e. linearly, alphabetically) instead of at random\n\n * CSS3 animation support for transitions (i.e. zoom/fade in from left, zoom/fade out upwards, etc)",
 		"github": "aamaliaa/turnup.js",
 		"blog_url": "",
 		"tags": ["javascript", "jquery"]
@@ -75,7 +75,6 @@ Amalia.Project.FIXTURES = [
 		"date": "",
 		"img_url": "http://s3.amazonaws.com/av_main/projects/voteforjordan_screenshot.png",
 		"time_period": "October 2012",
-		"url": "http://www.voteforjordan.com",
 		"blurb": "A swing voter put his presidential vote up to a vote on Twitter.",
 		"post": "<iframe src=\"http://player.vimeo.com/video/50576416\" width=\"500\" height=\"281\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\n\nJordan was a Florida resident who chose to let the world of Twitter decide which candidate would get his vote in the 2012 presidential election. Participants submitted their votes by hashtagging their tweets with either [#jordanvoteromney](http://twitter.com/search?q=%23jordanvoteromney&src=typd&mode=realtime) or [#jordanvoteobama](https://twitter.com/search?q=%23jordanvoteobama&src=typd&mode=realtime). The candidate that received the most votes was chosen on Jordan’s absentee ballot.\n\nI worked on this project with a team of art directors and copywriters and led the development of the voting system as well as the website myself. I set up a continuously running PHP script that utilized the Twitter Streaming API to filter the hashtag \"tweet-votes\" and update the percentages on the Vote For Jordan site in real-time.",
 		"github": "",
@@ -90,7 +89,7 @@ Amalia.Project.FIXTURES = [
 		"time_period": "June 2012",
 		"url": "",
 		"blurb": "A hackathon project that connected concertgoers via their music tastes.",
-		"post": "Fanfare allowed concertgoers to link up with Facebook friends with similar musical tastes and assisted with group ticket purchasing/distributing of funds.\n\nAs a huge music fan and concertgoer myself, I came up with the idea after trying and failing to find a friend to go see [Quadron](http://soundcloud.com/quadronmusic) (an amazing band who hasn’t quite made its landing in the US yet) with me at Rockwood Music Hall.\n\nMy team won a prize from Facebook for Fanfare’s use of the Facebook Open Graph API.",
+		"post": "<iframe width=\"640\" height=\"360\" src=\"http://www.youtube.com/embed/gMG8yLw0-q0?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\nFanfare allowed concertgoers to link up with Facebook friends with similar musical tastes and assisted with group ticket purchasing/distributing of funds.\n\nAs a huge music fan and concertgoer myself, I came up with the idea after trying and failing to find a friend to go see [Quadron](http://soundcloud.com/quadronmusic) with me at Rockwood Music Hall.\n\nThe app was written in PHP and Javascript and utilized the Facebook and Songkick APIs in less than 24 hours for AngelHack NYC 2012. My team took home a prize from Facebook for Fanfare’s use of the Facebook Open Graph API.",
 		"github": "",
 		"blog_url": "",
 		"tags": ["php", "javascript", "hackathon", "angelhack"]
@@ -103,7 +102,7 @@ Amalia.Project.FIXTURES = [
 		"time_period": "May 2012",
 		"url": "",
 		"blurb": "A hackathon mashup of the Craigslist Missed Connections and Foursquare.",
-		"post": "Fourplay mashed up Craigslist Missed Connection listings and Foursquare User data to bring users missed connections that happened near or at their check-ins.\n\nIn order to achieve this we:\n\n - screenscaped Craigslist Missed Connections with a [Python script](https://scraperwiki.com/scrapers/ottawa_craigslist_missed_connections_1/)\n\n*\tanalyzed each post for GPS data using the [Metalayer Text API](http://apis.metalayer.com/)\n\n*\tthen used the GPS information to locate and map locations using the [Factual](http://developer.factual.com/display/docs/Factual+Developer+APIs+Version+3) and [Foursquare](https://developer.foursquare.com/) APIs\n### PRESS\n- [Metalayer Blog](http://blog.metalayer.com/post/23444677000/fourplay-and-sidewinder-win-metalayers-api-hackathon)",
+		"post": "<div style='text-align:center; padding:15px;'><iframe src='http://www.snappytv.com/snap/fourplay-mashes-up-foursqaure-checkins-and-craigslist-miss-about-techcrunch-disrupt-ny-hackathon-2012-on-techcrunch-disrupt-ny-hackathon?w=500&h=312' width='500' height='312' frameborder='0' scrolling='no' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>\n\nFourplay mashed up Craigslist Missed Connection listings and Foursquare User data to bring users missed connections that happened near or at their check-ins.\n\nIn order to achieve this we:\n\n - screenscaped Craigslist Missed Connections with a [Python script](https://scraperwiki.com/scrapers/ottawa_craigslist_missed_connections_1/)\n\n - analyzed each post for GPS data using the [Metalayer Text API](http://apis.metalayer.com/)\n\n - then used the GPS information to locate and map locations using the [Factual](http://developer.factual.com/display/docs/Factual+Developer+APIs+Version+3) and [Foursquare](https://developer.foursquare.com/) APIs\n\nMy team was awarded the Metalayer API Award for our use of the Metalayer Text API to analyze the missed connection data.\n\n### Press\n- [Fourplay and Sidewinder Win MetaLayer’s API Hackathon](http://blog.metalayer.com/post/23444677000/fourplay-and-sidewinder-win-metalayers-api-hackathon)",
 		"github": "",
 		"blog_url": "",
 		"tags": ["php", "foursquare", "craigslist", "api", "hackathon", "techcrunch"]
