@@ -1,4 +1,5 @@
 @import "bootstrap-sass/lib/bootstrap"
+@import "font-awesome/scss/font-awesome"
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700)
 
 $color-main:	#333333
@@ -42,6 +43,7 @@ $font-header:	'Helvetica Neue', Helvetica, Arial, sans-serif
 
 =transition($value)
 	-moz-transition: $value
+	-ms-transition: $value
 	-o-transition: $value
 	-webkit-transition: $value
 	transition: $value
@@ -61,6 +63,7 @@ h1, h2, h3, h4, h5
 
 a
 	color: $color-accent
+	+transition(all 0.25s ease-in-out)
 	&:hover
 		color: lighten($color-accent, 10%)
 		text-decoration: none
