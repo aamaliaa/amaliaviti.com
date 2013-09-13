@@ -38,7 +38,7 @@ Amalia.Project.FIXTURES = [
 		"time_period": "June 2013",
 		"url": "http://citibike.amaliaviti.com",
 		"blurb": "An exploration with the Citibike API, Google Maps API, d3.js, and Ember.js.",
-		"post": "This is some sample text.\n\nBacon ipsum dolor sit amet proident aliqua swine, ex tempor tail do strip steak bresaola. Cillum magna shank, in ea aute frankfurter capicola. Voluptate cupidatat sint ex beef pork belly. Chuck et bresaola est sed ground round id incididunt spare ribs. Fugiat meatball et, ribeye tri-tip occaecat ham drumstick eu pastrami mollit dolor nisi aliqua labore.\n\nPork belly boudin shankle meatloaf cillum irure. Ham hock pork chop eiusmod in pancetta pastrami aliqua. Turkey sausage salami chicken ham hock. Consequat ball tip beef ribs pork belly sunt in chicken quis anim hamburger cupidatat ullamco.\n\nSalami pork pork chop elit, in ut magna pork loin dolor minim sint ribeye. In chuck ut enim tempor, sint irure pariatur qui boudin kielbasa. Dolor pork short loin spare ribs, eiusmod quis turducken meatloaf voluptate sirloin dolore. Sunt consequat ut bresaola sausage occaecat, sirloin biltong. Brisket mollit minim laborum prosciutto sirloin deserunt. Sirloin ad dolore minim.",
+		"post": "When Citibike was announced, I think I was more excited about the data that would be generated and shared publicly than the bikes themselves. This project is a quick experiment and current work in progress that is built on top of the real-time Citibike stations data.\n\nI used Google Maps and d3.js to plot out each of the stations on the map:\n\n- green stations have > 5 bikes available\n\n- orange stations have between 1 and 5 bikes available\n\n- red stations have 0 bikes available\n\n- a green station with a larger circle radius has more available bikes\n\nTo use the tool, simply enter an origin address and a destination address (both NYC addresses), and hit the \"plot\" button. Bicycle directions between the closest stations to each of the two points that you've specified will be plotted on the map.",
 		"github": "aamaliaa/citibike",
 		"blog_url": "",
 		"tags": ["javascript", "d3", "citibike", "google maps", "ember"]
@@ -79,7 +79,7 @@ Amalia.Project.FIXTURES = [
 		"post": "<iframe src=\"http://player.vimeo.com/video/50576416\" width=\"500\" height=\"281\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\n\nJordan was a Florida resident who chose to let the world of Twitter decide which candidate would get his vote in the 2012 presidential election. Participants submitted their votes by hashtagging their tweets with either [#jordanvoteromney](http://twitter.com/search?q=%23jordanvoteromney&src=typd&mode=realtime) or [#jordanvoteobama](https://twitter.com/search?q=%23jordanvoteobama&src=typd&mode=realtime). The candidate that received the most votes was chosen on Jordan’s absentee ballot.\n\nI worked on this project with a team of art directors and copywriters and led the development of the voting system as well as the website myself. I set up a continuously running PHP script that utilized the Twitter Streaming API to filter the hashtag \"tweet-votes\" and update the percentages on the Vote For Jordan site in real-time.",
 		"github": "",
 		"blog_url": "",
-		"tags": ["php", "twitter"]
+		"tags": ["php", "twitter", "mysql"]
 	},
 	{
 		"id": "fanfare",
