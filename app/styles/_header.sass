@@ -1,0 +1,39 @@
+#masthead
+	color: $color-main
+	font-family: $font-header
+
+	.navbar
+		max-height: 80px
+
+		.navbar-inner
+			background-color: $color-light
+			background-image: none
+			border-bottom: 1px solid $color-shadow
+			+box-shadow-none
+
+			.navbar-logo
+				color: $color-main
+				font-size: 18px
+				letter-spacing: -2
+				font-weight: 500
+				float: left
+				padding: 7px 15px
+				margin-right: auto
+				&:hover
+					text-decoration: none
+
+			.nav
+				float: right
+				position: relative
+				padding: 20px 7px
+
+				li > a
+					color: $color-main
+					font-weight: bold
+					font-size: 18px
+					border-top: 1px solid $color-main
+					margin: 0 5px
+					padding: 10px 35px 10px 0
+					&:hover
+						color: $color-accent
+						border-top: 1px solid $color-accent
