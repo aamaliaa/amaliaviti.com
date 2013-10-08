@@ -1,4 +1,4 @@
-<header id="masthead">
+<div class="wrap">
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			{{#linkTo "projects" class="navbar-logo"}}<h2>AMALIA VITI</h2>{{/linkTo}}
@@ -9,8 +9,11 @@
 			</ul>
 		</div>
 	</div>
-</header>
 
-{{outlet}}
+	<div class="main">
+		{{outlet}}
+	</div>
 
+	<div class="push"></div>
+</div>
 {{partial "footer"}}

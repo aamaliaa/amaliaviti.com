@@ -1,23 +1,21 @@
-<div class="main">
-	<div class="entry">
-		<div class="header">
-			<header class="title">
-				<h2>{{title}}</h2>
-				{{#if url}}<span class="url"><a {{bindAttr href=url}}>{{url}}</a></span>{{/if}}
-			</header>
-		</div>
-		<div class="blurb">{{blurb}}</div>
-		<div class="content">
-		  <div class="post">{{markdown post}}</div>
-		</div>
-		<div class="footer">
-			<div class="tags">
-				<ul>
-				{{#each tag in tags}}
-					<li class="tag">{{tag}}</li>
-				{{/each}}
-				</ul>
-			</div>
+<div class="entry">
+	<div class="header">
+		<header class="title">
+			<h2>{{title}}</h2>
+			{{#if url}}<span class="url"><a {{bindAttr href=url}}>{{url}}</a></span>{{/if}}
+		</header>
+	</div>
+	<div class="blurb">{{blurb}}</div>
+	<div class="content">
+	  <div class="post">{{markdown post}}</div>
+	</div>
+	<div class="footer">
+		<div class="tags">
+			<ul>
+			{{#each tag in tags}}
+				<li class="tag">{{tag}}</li>
+			{{/each}}
+			</ul>
 		</div>
 	</div>
 </div>

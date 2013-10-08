@@ -38,13 +38,14 @@
 
 *
 	+box-sizing()
+	margin: 0
 
 html, body
 	font-family: $font-main
 	font-size: 14px
 	line-height: 20px
 	color: $color-main
-	//background-color: rgb(229, 233, 236)
+	height: 100%
 
 h1, h2, h3, h4, h5
 	font-family: $font-header
@@ -59,8 +60,18 @@ a
 iframe
 	border: none
 
+.ember-view
+	height: 100%
+
+.wrap
+	height: 100%
+	min-height: 100%
+	height: auto !important
+	margin: 0 auto -50px
+
+.push
+	height: 50px
+
 .main
 	width: 100%
-	position: relative
-	margin-top: 80px
-	padding: 20px
+	padding: 80px 20px 20px 20px
