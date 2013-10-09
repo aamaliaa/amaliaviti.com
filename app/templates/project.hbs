@@ -1,11 +1,21 @@
 <div class="entry">
 	<div class="header">
 		<header class="title">
-			<h2>{{title}}</h2>
-			{{#if url}}<span class="url"><a {{bindAttr href=url}}>{{url}}</a></span>{{/if}}
+			<h1>{{title}}</h1>
+			<div class="blurb">{{blurb}}</div>
+			<ul class="details">
+				{{#if tags}}
+					<li>TAGS: 
+						{{#csv tags}}
+							{{this}}
+						{{/csv}}
+					</li>
+				{{/if}}
+				{{#if github}}<li>CODE: <a {{bindAttr href="github"}} target="_blank">{{github}}</a></li>{{/if}}
+				{{#if url}}<li class="url">URL: <a {{bindAttr href=url}} target="_blank">{{url}}</a></li>{{/if}}
+			</ul>
 		</header>
 	</div>
-	<div class="blurb">{{blurb}}</div>
 	<div class="content">
 	  <div class="post">{{markdown post}}</div>
 	</div>

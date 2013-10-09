@@ -39,7 +39,7 @@ Amalia.Project.FIXTURES = [
 		"url": "http://citibike.amaliaviti.com",
 		"blurb": "An exploration with the Citibike API, Google Maps API, d3.js, and Ember.js.",
 		"post": "When Citibike was announced, I think I was more excited about the data that would be generated and shared publicly than the bikes themselves. This project is a quick experiment and current work in progress that is built on top of the real-time Citibike stations data.\n\nI used Google Maps and d3.js to plot out each of the stations on the map:\n\n- green stations have > 5 bikes available\n\n- orange stations have between 1 and 5 bikes available\n\n- red stations have 0 bikes available\n\n- a green station with a larger circle radius has more available bikes\n\nTo use the tool, simply enter an origin address and a destination address (both NYC addresses), and hit the \"plot\" button. Bicycle directions between the closest stations to each of the two points that you've specified will be plotted on the map.",
-		"github": "aamaliaa/citibike",
+		"github": "http://github.com/aamaliaa/citibike",
 		"blog_url": "",
 		"tags": ["javascript", "d3", "citibike", "google maps", "ember"]
 	},
@@ -52,7 +52,7 @@ Amalia.Project.FIXTURES = [
 		"url": "",
 		"blurb": "A simple jQuery plugin that flashes text from a list.",
 		"post": "turnUp.js is a jQuery plugin that, given a list of strings, continuously grabs one string randomly and \"turns it up\".\n\n<h1 class='turnup' style='text-align: center;'>NYMERIA</h1>\n\nI came across a similar implementation of this effect while browsing the Internet one day and decided that it might make a useful plugin for my portfolio (see the 'about' page) and other future projects.\n\n###How to Use\n\nIt's super simple to plug it in your code:\n\n\t$('#title').turnup({ list: ['one', 'two', 'three', 'four'] });\n\nYou can also change the CSS3 transition and interval time:\n\n\t$('#title').turnup({\n\t\tlist: ['Grey Wind', 'Lady', 'Nymeria', 'Summer', 'Shaggy Dog'],\n\t\ttransition: 'all 250ms ease',\n\t\tinterval: 450\n\t});\t\n\n###Options\n\n - `list: ['one', 'two', 'three', 'four']` - an array of strings\n\n - `transition: 'all 250ms ease'` - valid css string\n\n - `interval: 450` - time between words (in milliseconds)\n\n###Public Methods\n\nIf you want to stop an instance after it has been instantiated, just tell it to stop.\n\n\t$('#title').turnup('stop');\n\nThen you can also turn up again!\n\n\t$('#title').turnup('start');\n\n###To Do\n\n * add options for cycling through list (i.e. linearly, alphabetically) instead of at random\n\n * CSS3 animation support for transitions (i.e. zoom/fade in from left, zoom/fade out upwards, etc)",
-		"github": "aamaliaa/turnup.js",
+		"github": "http://github.com/aamaliaa/turnup.js",
 		"blog_url": "",
 		"tags": ["javascript", "jquery"]
 	},
