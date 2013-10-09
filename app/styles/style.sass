@@ -2,34 +2,20 @@
 @import "font-awesome/scss/font-awesome"
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700|Lato:400,700)
 
-$color-main:	#333333
+$color-main:	#303030
 $color-shadow:	#dddddd
 $color-light:	#ffffff
-$color-accent:	#d83904
+$color-accent:	#f2522e
+$color-accent2:	#0089fa
 
 $font-main:		'Lato', 'Open Sans', Helvetica, Arial, sans-serif
 $font-header:	'Helvetica Neue', Helvetica, Arial, sans-serif
 
 @import "core"
 @import "header"
-
-// .splash
-// 	height: 100%
-// 	width: 100%
-// 	position: absolute
-// 	padding: 20px
-// 	background-image: url('../images/aviti.jpg')
-// 	+background-size(cover)
-// 	text-align: center
-	
-// 	svg.logo path
-// 		fill: $color-main !important
-// 		opacity: 0.3
-
-// 	h2
-// 		font-size: 64px
-
+@import "index"
 @import "about"
+@import "project"
 
 .projects-list
 	&.tiles
@@ -38,7 +24,6 @@ $font-header:	'Helvetica Neue', Helvetica, Arial, sans-serif
 
 		.project-tile
 			list-style: none
-			//border-bottom: 1px solid #ddd
 			+border-radius(1px)
 			background-color: #fff
 			background-repeat: no-repeat
@@ -62,6 +47,13 @@ $font-header:	'Helvetica Neue', Helvetica, Arial, sans-serif
 			@media (max-width: 3100px) and (min-width: 2700px)
 				width: 13.5%
 
+			&:hover
+				color: black
+
+				.overlay
+					background: $color-main
+					opacity: 0.3
+
 			.image
 				width: 100%
 				height: 200px
@@ -80,6 +72,15 @@ $font-header:	'Helvetica Neue', Helvetica, Arial, sans-serif
 				&:hover
 					text-decoration: none
 					color: inherit
+
+				.overlay
+					position: absolute
+					padding: 200px 0px 0px
+					bottom: 80px
+					left: 0
+					right: 0
+					overflow: hidden
+
 				.meta
 					height: 80px
 					position: absolute
@@ -94,57 +95,10 @@ $font-header:	'Helvetica Neue', Helvetica, Arial, sans-serif
 				font-size: 16px
 				text-transform: uppercase
 
-.entry
-	background-color: #fff
-	border-bottom: 1px solid $color-shadow
-	padding: 20px
-
-	.header
-		h2
-			display: inline-block
-		.url
-			margin-left: 10px
-			a
-				color: $color-accent
-				font-weight: bold
-				text-decoration: none
-				&:hover
-					color: lighten($color-accent, 10%)
-
-	.blurb
-		font-style: italic
-
-	.content
-		font-size: 18px
-		font-weight: 200
-		line-height: 30px
-		margin: 20px 0
-
-		.max-width-video-wrapper
-			padding: 15px
-
-	.tags
-		font-size: 12px
-
-		ul
-			margin: 0
-
-			li
-				margin: 0
-				padding: 0
-				display: inline
-				list-style-type: none
-
-				&.tag
-					color: $color-light
-					background-color: lighten($color-accent, 20%)
-					+border-radius(3px)
-					font-weight: bold
-					padding: 4px 8px
 
 /*	TURNUP.JS	*/
 .turnup, .turnup-sample
 	text-transform: uppercase
-	color: $color-accent
+	color: $color-accent2
 
 @import "footer"

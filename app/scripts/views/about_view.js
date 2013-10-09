@@ -1,5 +1,6 @@
 Amalia.AboutView = Ember.View.extend({
 	didInsertElement: function(event){
+		window.scrollTo(0,0);
 		if(this.$().find('.turnup').length > 0) {
 			this.$('.turnup').turnup({
 				list: [

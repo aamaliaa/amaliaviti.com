@@ -1,0 +1,45 @@
+.entry
+	background-color: #fff
+
+	.header
+		h2
+			display: inline-block
+		.url
+			margin-left: 10px
+			a
+				color: $color-accent
+				font-weight: bold
+				text-decoration: none
+				&:hover
+					color: lighten($color-accent, 10%)
+
+	.blurb
+		font-style: italic
+
+	.content
+		font-size: 18px
+		font-weight: 200
+		line-height: 30px
+		margin: 20px 0
+
+		.max-width-video-wrapper
+			padding: 15px
+
+	.tags
+		font-size: 12px
+
+		ul
+			margin: 0
+
+			li
+				margin: 0
+				padding: 0
+				display: inline
+				list-style-type: none
+
+				&.tag
+					color: $color-light
+					background-color: lighten($color-accent, 20%)
+					+border-radius(3px)
+					font-weight: bold
+					padding: 4px 8px

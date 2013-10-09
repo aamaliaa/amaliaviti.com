@@ -1,38 +1,38 @@
 .navbar
-	max-height: 80px
 	color: $color-main
 	font-family: $font-header
 
 	.navbar-inner
-		background-color: $color-light
+		min-height: 80px
+		background: rgba(255, 255, 255, 0.8)
 		background-image: none
-		//border-bottom: 1px solid $color-shadow
-		border: none
+		border-bottom: 1px solid $color-main
 		+box-shadow-none
 
 		.navbar-logo
-			color: $color-main
-			font-size: 18px
-			letter-spacing: -2
-			font-weight: 500
-			float: left
-			padding: 7px 15px
-			margin-right: auto
-			&:hover
-				text-decoration: none
+			img
+				width: 100%
+				position: absolute
+				margin: 15px auto
+				height: 50px
 
-		.nav
-			float: right
-			position: relative
-			padding: 20px 7px
+		@media (max-width: 3100px) and (min-width: 768px)
+			.nav
+				position: relative
+				padding: 23px 7px
+				float: right
 
-			li > a
-				color: $color-main
-				font-weight: bold
-				font-size: 18px
-				border-top: 1px solid $color-main
-				margin: 0 5px
-				padding: 10px 35px 10px 0
-				&:hover
-					color: $color-accent
-					border-top: 1px solid $color-accent
+				li > a
+					font-weight: bold
+					font-size: 18px
+					letter-spacing: -0.03em
+					margin: 0px 10px
+					padding: 7px 0px
+					color: $color-main
+					border-bottom: 2px solid transparent
+					&:hover
+						border-bottom: 2px solid $color-accent2
+
+		@media (max-width: 768px) and (min-width: 300px) 
+			.nav
+				display: none

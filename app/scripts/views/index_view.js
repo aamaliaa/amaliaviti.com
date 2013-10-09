@@ -1,0 +1,1 @@
+Amalia.IndexView = Ember.View.extend({});

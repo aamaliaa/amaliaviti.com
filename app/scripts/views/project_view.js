@@ -1,5 +1,6 @@
 Amalia.ProjectView = Ember.View.extend({
 	didInsertElement: function(event){
+		window.scrollTo(0,0);
 
 		$('.post').fitVids({ maxWidth: 650 });
 

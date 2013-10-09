@@ -12,7 +12,7 @@ Amalia.About = DS.Model.extend({
 
 Amalia.About.FIXTURES = [{
 	"id": "1",
-	"content": "<p>I find I am happiest when I am making things. These things include, but are not at all limited to web apps, hackathon projects, physical computing thingamabobs (think: arduino, raspberry pi, and the Internet of Things), and music. I am fascinated with the way things work and have been a tinkerer for as long as I can remember--<a href=\"http://www.aamaliaa.com/post/56397901620/legos-were-are-my-favorite\">LEGOs</a> were and still are my favorite toy. That cool place where technology, design, and creativity intersect is where I like to spend most of my time.</p> <p>I am curious. I like to learn something new every day and am always trying to discover new ways to do just that.</p> <p>I currently work as a full-stack developer at <strong><a href=\"http://www.mediamath.com\">MediaMath</a></strong>.</p>"
+	"content": "<p>I find I am happiest when I am making things. These things include, but are not at all limited to web apps, hackathon projects, physical computing thingamabobs (think: arduino, raspberry pi, and the Internet of Things), and music. I am fascinated with the way things work and have been a tinkerer for as long as I can remember&mdash;<a href=\"http://www.aamaliaa.com/post/56397901620/legos-were-are-my-favorite\">LEGOs</a> were and still are my favorite toy. That cool place where technology, design, and creativity intersect is where I like to spend most of my time.</p> <p>I am curious. I like to learn something new every day and am always trying to discover new ways to do just that.</p> <p>I currently work as a full-stack developer at <strong><a href=\"http://www.mediamath.com\">MediaMath</a></strong>.</p>"
 }];
 
 Amalia.Project = DS.Model.extend({
@@ -64,7 +64,7 @@ Amalia.Project.FIXTURES = [
 		"time_period": "October 2012-Present",
 		"url": "",
 		"blurb": "An internet of things project with Raspberry Pi and Arduino.",
-		"post": "I live in a 3-bedroom apartment with only one bathroom and wanted an easy way to know when the bathroom was unoccupied without leaving my room. My solution was to design my own airplane-style lavatory vacancy light for my room.\n\nAn Arduino equipped with a magnetic reed switch and a WiFly is attached to my bathroom doorframe that transmits signals using Pusher via wifi. On the receiving end in my bedroom is a Raspberry Pi that listens to the Arduino’s Pusher channel and triggers an LED via GPIO when the bathroom door is closed.",
+		"post": "I live in a 3-bedroom apartment with only one bathroom and wanted an easy way to know when the bathroom was unoccupied without leaving my room (and my bed, for that matter). So, like any other normal person, I decided the solution was to design my own airplane-style lavatory vacancy light for my room.\n\n###V1 (FALL 2012)\nAn Arduino equipped with a magnetic reed switch and a WiFly was attached to my bathroom doorframe that transmitted signals using Pusher via wifi. On the receiving end in my bedroom was a Raspberry Pi which was subscribed to the Arduino's Pusher channel. When signal was received upon door open and close, the Pi triggered an LED via its GPIO.\n\n###V2 (PRESENT)\nA current work in [progress](http://www.aamaliaa.com/post/57084963691/project-1-arduino-powered-bathroom-vacancy-light-part) that involves Node.js and web sockets.",
 		"github": "",
 		"blog_url": "http://www.aamaliaa.com/tagged/project1",
 		"tags": ["raspberry pi", "arduino", "internet of things"]
