@@ -1,3 +1,10 @@
+$font-details-size: 0.9em
+$font-body-size: 20px
+$font-h1-size: 5em
+$font-h3-size: 26px
+$font-code-size: 16px
+$font-tag-size: 0.8em
+
 .entry
 	background-color: #fff
 	padding: 10px 50px
@@ -5,32 +12,63 @@
 	.header
 		margin: 0 auto
 		border-bottom: 1px solid $color-main
+		margin-bottom: 10px
 
 		h1
-			font-size: 5em
+			font-size: $font-h1-size
 			line-height: normal
 
-		.blurb
-			font-style: italic
-			font-family: $font-small
+	.topbar
+		border-bottom: 1px solid $color-main
+		margin-bottom: 10px
 
-		.details
-			font-size: 1em
-			font-family: $font-small
+		.blurb
+			font-style: italic !important
+			margin-bottom: 10px
+
+		dl
+			margin-bottom: 10px
+
+			dt
+				font-family: $font-header
+				float: left
+			dd
+				padding-left: 50px
+
+	.sidebar
+		display: block
+		
+		ul.details
+			font-size: $font-details-size
+			font-family: $font-main
 			list-style: none
 			margin: 0
 
-			li > a
-				color: $color-accent
+		ul.details > li
+			padding: 0px 0 30px 0
+			border-bottom: 1px solid $color-main
+			margin-bottom: 10px
+
+			&.blurb
+				font-style: italic
+				font-family: $font-main
+
+			.details-header
+				font-family: $font-header
+				font-weight: bold
+				letter-spacing: -0.03em
+				font-size: $font-details-size + 0.2em
+
+			a
 				font-weight: bold
 				text-decoration: none
 				&:hover
-					color: lighten($color-accent, 10%)
+					color: $color-accent
 
 	.content
-		font-size: 22px
+		font-size: $font-body-size
 		line-height: 1.45
-		margin: 20px 0
+		margin-bottom: 20px
 
 		.max-width-video-wrapper
 			padding: 15px
@@ -39,7 +77,7 @@
 			margin: 0
 		
 		h3
-			font-size: 26px
+			font-size: $font-h3-size
 
 		p, ul, blockquote
 			margin-bottom: 20px
@@ -58,24 +96,28 @@
 			border: none
 
 			code
-				font-size: 16px
+				font-size: $font-code-size
 
+.tags
+	font-size: $font-tag-size
+	font-family: $font-header
+
+	ul
+		margin: 3px 0 0 0
+
+		li
+			margin: 3px 0
+			padding: 0
+			display: inline-block
+			list-style-type: none
+
+			&.tag
+				color: #fff
+				background-color: $color-accent2
+				+border-radius(3px)
+				font-weight: bold
+				padding: 4px 8px
+
+.bottombar
 	.tags
-		font-size: 1em
-		font-family: $font-small
-
-		ul
-			margin: 0
-
-			li
-				margin: 0
-				padding: 0
-				display: inline
-				list-style-type: none
-
-				&.tag
-					color: $color-light
-					background-color: lighten($color-accent, 20%)
-					+border-radius(3px)
-					font-weight: bold
-					padding: 4px 8px
+		float: right

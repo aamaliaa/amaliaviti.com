@@ -7,5 +7,12 @@ Amalia.ProjectView = Ember.View.extend({
 		if(this.get('controller').get('id') === 'turnup-js') {
 			this.$('.turnup').turnup({list: ['Grey Wind', 'Lady', 'Nymeria', 'Summer', 'Shaggy Dog']});
 		}
-	}
+	},
+	renderLinks: function(){
+		if(this.get('controller').get('url') || this.get('controller').get('github')){
+			return true;
+		} else{
+			return false;
+		}
+	}.property()
 });

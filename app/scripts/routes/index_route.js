@@ -1,5 +1,5 @@
 Amalia.IndexRoute = Ember.Route.extend({
-	// redirect: function() {
-	// 	this.transitionTo('projects');
-	// }
+	model: function () {
+		return Amalia.About.find();
+	}
 });

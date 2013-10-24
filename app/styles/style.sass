@@ -1,6 +1,7 @@
 @import "bootstrap-sass/lib/bootstrap"
+@import "bootstrap-sass/lib/responsive"
 @import "font-awesome/scss/font-awesome"
-@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400|Lato:400,700)
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700)
 
 $color-main:	#303030
 $color-shadow:	#dddddd
@@ -8,13 +9,16 @@ $color-light:	#ffffff
 $color-accent:	#f2522e
 $color-accent2:	#0089fa
 
-$font-main:		'Gentium Book Basic', Helvetica, Arial, sans-serif
-$font-small:	'Lato', 'Open Sans', Helvetica, Arial, sans-serif
-$font-header:	'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-main:		'Lato', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-header:	'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-small:	$font-main
+
+$break-smart:	480px
+$break-tablet:	768px
+$break-wide:	1000px
 
 @import "core"
 @import "header"
-@import "index"
 @import "about"
 @import "project"
 
@@ -35,9 +39,9 @@ $font-header:	'Helvetica Neue', Helvetica, Arial, sans-serif
 			height: 285px
 			margin: 0 17px 20px 0
 			width: 90%
-			@media (max-width: 1000px) and (min-width: 768px)
+			@media (max-width: $break-wide) and (min-width: $break-tablet)
 				width: 46%
-			@media (max-width: 1400px) and (min-width: 1000px)
+			@media (max-width: 1400px) and (min-width: $break-wide)
 				width: 31%
 			@media (max-width: 1800px) and (min-width: 1400px)
 				width: 23.4%

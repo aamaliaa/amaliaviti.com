@@ -16,23 +16,22 @@
 				margin: 15px auto
 				height: 50px
 
-		@media (max-width: 3100px) and (min-width: 768px)
-			.nav
-				position: relative
-				padding: 23px 7px
-				float: right
+				@media (max-width: 767px)
+					float: left
+					width: inherit
+					margin: 15px
+		.nav
+			position: relative
+			padding: 23px 7px
+			float: right
 
-				li > a
-					font-weight: bold
-					font-size: 18px
-					letter-spacing: -0.03em
-					margin: 0px 10px
-					padding: 7px 0px
-					color: $color-main
-					border-bottom: 2px solid transparent
-					&:hover
-						border-bottom: 2px solid $color-accent2
-
-		@media (max-width: 768px) and (min-width: 300px) 
-			.nav
-				display: none
+			li > a
+				font-weight: bold
+				font-size: 18px
+				letter-spacing: -0.03em
+				margin: 0px 10px
+				padding: 7px 0px
+				color: $color-main
+				border-bottom: 2px solid transparent
+				&:hover
+					border-bottom: 2px solid $color-accent2

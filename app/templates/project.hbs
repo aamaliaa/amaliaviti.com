@@ -2,30 +2,67 @@
 	<div class="header">
 		<header class="title">
 			<h1>{{title}}</h1>
-			<div class="blurb">{{blurb}}</div>
-			<ul class="details">
-				{{#if tags}}
-					<li>TAGS: 
-						{{#csv tags}}
-							{{this}}
-						{{/csv}}
-					</li>
-				{{/if}}
-				{{#if github}}<li>CODE: <a {{bindAttr href="github"}} target="_blank">{{github}}</a></li>{{/if}}
-				{{#if url}}<li class="url">URL: <a {{bindAttr href=url}} target="_blank">{{url}}</a></li>{{/if}}
-			</ul>
 		</header>
 	</div>
-	<div class="content">
-	  <div class="post">{{markdown post}}</div>
+	<div class="visible-phone row-fluid topbar">
+		<div class="blurb">{{blurb}}</div>
+		{{#if view.renderLinks}}
+			<dl class="urls">
+			{{#if url}}
+				<dt>url</dt>
+				<dd><a {{bindAttr href=url}} target="_blank">{{cleanLink url}}</a></dd>
+			{{/if}}
+			{{#if github}}
+				<dt>github</dt>
+				<dd><a {{bindAttr href=github}} target="_blank">{{cleanLink github}}</a></dd>
+			{{/if}}
+			</dl>
+		{{/if}}
 	</div>
-	<div class="footer">
-		<div class="tags">
-			<ul>
-			{{#each tag in tags}}
-				<li class="tag">{{tag}}</li>
-			{{/each}}
+	<div class="row-fluid">
+		<div class="content span9">
+		  <div class="post">{{markdown post}}</div>
+		</div>
+		<div class="sidebar span3 hidden-phone">
+			<ul class="details">
+				<li>
+					<div class="details-header">Summary</div>
+					{{blurb}}
+				</li>
+			{{#if view.renderLinks}}
+				<li class="url">
+					<div class="details-header">Links</div>
+					{{#if url}}
+						<a {{bindAttr href=url}} target="_blank">{{cleanLink url}}</a>
+					{{/if}}
+					{{#if github}}
+						<a {{bindAttr href=github}} target="_blank">{{cleanLink github}}</a>
+					{{/if}}
+				</li>
+			{{/if}}
+			{{#if tags}}
+				<li>
+					<div class="details-header">Tags</div> 
+					<div class="tags">
+						<ul>
+							{{#each tag in tags}}
+								<li class="tag">{{tag}}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</li>
+			{{/if}}
 			</ul>
 		</div>
 	</div>
+	<div class="visible-phone row-fluid bottombar">
+		<div class="tags">
+			<ul>
+				{{#each tag in tags}}
+					<li class="tag">{{tag}}</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	<div class="footer"></div>
 </div>

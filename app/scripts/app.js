@@ -1,6 +1,5 @@
 var Amalia = window.Amalia = Ember.Application.create();
 
-/* Order and include as you please. */
 require('scripts/store');
 require('scripts/routes/*');
 require('scripts/controllers/*');
@@ -14,6 +13,6 @@ Ember.Handlebars.registerBoundHelper('markdown', function(input){
 	return new Handlebars.SafeString(showdown.makeHtml(input));
 });
 
-Ember.Handlebars.registerBoundHelper('csv', function(items, options) {
-    return options.fn(items.join(', '));
+Ember.Handlebars.registerBoundHelper('cleanLink', function(url){
+	return new Handlebars.SafeString(url.replace('http://', ''));
 });
