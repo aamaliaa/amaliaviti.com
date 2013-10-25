@@ -16,9 +16,7 @@ I've used the following to build this:
 
 TO DO
 -----
-*	finish adding project text/assets
-*	finish front-end
-*	figure out how to get urls to work ALL THE TIME without hashbangs
+*	figure out how to get urls to work ALL THE TIME without hashbangs?
 *	switch to MongoDB and a Node.js API to serve JSON files using Ember DS.RESTAdapter
 *	create back-end CMS on top of MongoDB (user-friendly way of adding new projects)
 *	and more (as I think of them)...
