@@ -5,9 +5,17 @@ $font-h3-size: 26px
 $font-code-size: 16px
 $font-tag-size: 0.8em
 
+$font-tablet-body-size: 14px
+$font-tablet-h1-size: 3em
+$font-tablet-code-size: 9px
+
 .entry
 	background-color: #fff
 	padding: 10px 50px
+	margin-top: -20px
+
+	@media (max-width: $break-smart)
+		padding: 10px
 
 	.header
 		margin: 0 auto
@@ -17,6 +25,9 @@ $font-tag-size: 0.8em
 		h1
 			font-size: $font-h1-size
 			line-height: normal
+
+			@media (max-width: $break-smart)
+				font-size: $font-tablet-h1-size
 
 	.topbar
 		border-bottom: 1px solid $color-main
@@ -52,6 +63,10 @@ $font-tag-size: 0.8em
 			&.blurb
 				font-style: italic
 				font-family: $font-main
+
+			&.url ul
+				list-style-type: none
+				margin-left: 0
 
 			.details-header
 				font-family: $font-header
@@ -98,6 +113,13 @@ $font-tag-size: 0.8em
 			code
 				font-size: $font-code-size
 
+		@media (max-width: $break-smart)
+			font-size: $font-tablet-body-size
+			li
+				margin-left: 0px !important
+			pre code
+				font-size: $font-tablet-code-size
+
 .tags
 	font-size: $font-tag-size
 	font-family: $font-header
@@ -121,3 +143,6 @@ $font-tag-size: 0.8em
 .bottombar
 	.tags
 		float: right
+
+	@media (max-width: $break-smart)
+		margin-bottom: 20px

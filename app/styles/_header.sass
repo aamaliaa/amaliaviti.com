@@ -16,10 +16,6 @@
 				margin: 15px auto
 				height: 50px
 
-				@media (max-width: 767px)
-					float: left
-					width: inherit
-					margin: 15px
 		.nav
 			position: relative
 			padding: 23px 7px
@@ -35,3 +31,38 @@
 				border-bottom: 2px solid transparent
 				&:hover
 					border-bottom: 2px solid $color-accent2
+
+	@media (min-width: $break-smart) and (max-width: $break-tablet)
+		.navbar-inner
+			.navbar-logo
+				img
+					float: left
+					width: inherit
+					margin: 15px
+
+	@media (max-width: $break-smart)
+		.navbar-inner
+			height: 100px
+
+			.navbar-logo
+				img
+					position: relative
+					display: block
+					height: auto
+					margin-top: 0px
+					width: 382
+					height: 50px
+			ul.nav
+				float: none
+				text-align: center
+				margin: 0
+				padding: 0
+				li
+					float: none
+					display: inline-block
+					margin: 0
+					a
+						margin: 0 15px 0 0
+						padding: 0
+					&:last-child a
+						margin-right: 0

@@ -10,7 +10,7 @@ $color-accent:	#f2522e
 $color-accent2:	#0089fa
 
 $font-main:		'Lato', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
-$font-header:	'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-header:	'Helvetica Neue Light', 'Helvetica Neue', Helvetica, 'Lato', Arial, sans-serif
 $font-small:	$font-main
 
 $break-smart:	480px
@@ -27,6 +27,9 @@ $break-wide:	1000px
 		padding: 0
 		margin: 20px 20px 0 60px
 
+		@media (max-width: $break-smart)
+			margin-left: 18px
+
 		.project-tile
 			list-style: none
 			+border-radius(1px)
@@ -38,7 +41,7 @@ $break-wide:	1000px
 			position: relative
 			height: 285px
 			margin: 0 17px 20px 0
-			width: 90%
+			width: 100%
 			@media (max-width: $break-wide) and (min-width: $break-tablet)
 				width: 46%
 			@media (max-width: 1400px) and (min-width: $break-wide)
@@ -88,6 +91,11 @@ $break-wide:	1000px
 
 				.meta
 					font-family: $font-small
+
+					@media (max-width: $break-smart)
+						.blurb
+							display: none
+
 					height: 80px
 					position: absolute
 					bottom: 0
