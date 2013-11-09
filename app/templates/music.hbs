@@ -1,0 +1,26 @@
+<div id="soundcloud-widget"></div>
+
+<div class="about">
+	<p>I am a musician. I primarily play the piano... and also experiment with any instrument I can get my hands on (so far the MicroKorg, guitar, ukulele, glockenspiel) whenever I'm feeling inspired.</p>
+
+	<p>I like to use Reason, Logic, and Ableton for recording my creations.</p>
+</div>
+
+{{#view view.list contentBinding="model"}}
+	{{#each track in view.content}}
+		{{#view view.track contentBinding="track"}}
+			<div class="actions">
+				{{#if view.isActive}}
+					<i class="icon-pause"></i>
+				{{else}}
+					<i class="icon-play"></i>
+				{{/if}}
+			</div>
+			<div class="waveform">
+				<h3 class="title">{{track.title}}</h3>
+				<progress {{bindAttr value="view.relativePosition"}}></progress>
+				<img {{bindAttr src="track.waveform_url"}}>
+			</div>
+		{{/view}}
+	{{/each}}
+{{/view}}
