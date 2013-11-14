@@ -1,7 +1,7 @@
 <div id="soundcloud-widget"></div>
 
 <div class="about">
-	<p>I am a musician. I primarily play the piano... and also experiment with any instrument I can get my hands on (so far the MicroKorg, guitar, ukulele, glockenspiel) whenever I'm feeling inspired.</p>
+	<p>I make music. I primarily play the piano... but also experiment with any instrument I can get my hands on (so far MicroKorg, guitar, ukulele, glockenspiel) whenever I'm feeling inspired.</p>
 
 	<p>I like to use Reason, Logic, and Ableton for recording my creations.</p>
 </div>
@@ -17,10 +17,14 @@
 				{{/if}}
 			</div>
 			<div class="waveform">
-				<h3 class="title">{{track.title}}</h3>
 				<progress {{bindAttr value="view.relativePosition"}}></progress>
+				<h3 class="title">{{track.title}}</h3>
 				<img {{bindAttr src="track.waveform_url"}}>
 			</div>
 		{{/view}}
 	{{/each}}
 {{/view}}
+
+<div class="about">
+	<p>You can also listen on <a href="http://www.soundcloud.com/amalia">Soundcloud</a>.
+</div>
