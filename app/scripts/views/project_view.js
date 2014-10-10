@@ -4,7 +4,7 @@ Amalia.ProjectView = Ember.View.extend({
 
 		$('.post').fitVids({ maxWidth: 650 });
 
-		if(this.get('controller').get('id') === 'turnup-js') {
+		if(this.get('controller').get('id') === 'turnup_js') {
 			this.$('.turnup').turnup({list: ['Grey Wind', 'Lady', 'Nymeria', 'Summer', 'Shaggy Dog']});
 		}
 	},
