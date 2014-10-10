@@ -14,9 +14,18 @@ I've used the following to build this:
 *	[turnup.js](http://github.com/aamaliaa/turnup.js)
 *	fitvids.js
 
+Reminder
+--------
+
+To deploy `dist/` to `gh-pages` branch only:
+
+ * `git checkout master`
+ * `git subtree split --prefix dist -b gh-pages`
+ * `git push -f origin gh-pages:gh-pages`
+ * `git branch -D gh-pages`
+
+(from: http://www.damian.oquanta.info/posts/one-line-deployment-of-your-site-to-gh-pages.html)
+
 TO DO
 -----
 *	figure out how to get urls to work ALL THE TIME without hashbangs?
-*	switch to MongoDB and a Node.js API to serve JSON files using Ember DS.RESTAdapter
-*	create back-end CMS on top of MongoDB (user-friendly way of adding new projects)
-*	and more (as I think of them)...
