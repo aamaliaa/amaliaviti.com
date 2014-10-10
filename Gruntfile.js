@@ -24,6 +24,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
+            data: {
+              files: '<%= yeoman.app %>/data/{,*/}*.md',
+              tasks: ['data', 'livereload']
+            },
             emberTemplates: {
                 files: '<%= yeoman.app %>/templates/**/*.hbs',
                 tasks: ['emberTemplates', 'livereload']
@@ -287,16 +291,19 @@ module.exports = function (grunt) {
         },
         concurrent: {
             server: [
+                'data',
                 'emberTemplates',
                 'coffee:dist',
                 'compass:server'
             ],
             test: [
+                'data',
                 'emberTemplates',
                 'coffee',
                 'compass'
             ],
             dist: [
+                'data',
                 'emberTemplates',
                 'coffee',
                 'compass:dist',
@@ -380,4 +387,23 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+    
+    grunt.registerTask('data', 'Build data template', function() {
+      var fs = require('fs');
+      var marked = require('marked');
+      
+      var about = marked(fs.readFileSync('data/about.md').toString()).replace(/(\r\n|\n|\r|\t)/gm,"").replace(/\'/g, "\\'");
+      
+      var content = "// GRUNT - GENERATED BUILD FILE - DO NOT EDIT MANUALLY, OK? // \nAmalia.Data = {\n\tabout: '" + about + "',\n\tprojects: {}\n}; \n\n";
+
+      var files = fs.readdirSync('data/projects');
+      files.forEach(function(filename) {
+        if(filename[0] !== '.') {
+          content += " Amalia.Data.projects." + filename.split(".")[0] + " = '" + marked(fs.readFileSync('data/projects/' + filename).toString()).replace(/(\r\n|\n|\r|\t)/gm,"").replace(/\'/g, "\\'") + "';\n\n";
+        }
+      });
+
+      fs.writeFileSync('app/scripts/data.js', content);
+      console.log('Built data file - ' + new Date().toISOString());
+    });
 };

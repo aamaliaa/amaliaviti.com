@@ -10,7 +10,6 @@ I've used the following to build this:
 *	handlebars
 *	Sass
 *	font-awesome
-*	Showdown.js
 *	[turnup.js](http://github.com/aamaliaa/turnup.js)
 *	fitvids.js
 
