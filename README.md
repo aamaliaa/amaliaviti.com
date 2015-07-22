@@ -1,7 +1,5 @@
-the *new* amaliaviti.com
+the *old* amaliaviti.com
 ========================
-
-This is still in progress.
 
 I've used the following to build this:
 *	yeoman (with bower and grunt)
@@ -24,7 +22,3 @@ To deploy `dist/` to `gh-pages` branch only:
  * `git branch -D gh-pages`
 
 (from: http://www.damian.oquanta.info/posts/one-line-deployment-of-your-site-to-gh-pages.html)
-
-TO DO
------
-*	figure out how to get urls to work ALL THE TIME without hashbangs?
